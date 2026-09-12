@@ -53,3 +53,26 @@ h2 { font-size:clamp(36px,5vw,60px); } .section-copy { color:#6e5c73; max-width:
 .woocommerce .site-main, .woocommerce-page .site-main { padding:70px 0; }.woocommerce ul.products { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }.woocommerce ul.products::before,.woocommerce ul.products::after { display:none; }
 @media (max-width:800px) { .hero-grid,.giveback { grid-template-columns:1fr; gap:42px; }.product-grid,.woocommerce ul.products { grid-template-columns:repeat(2,1fr); }.nav a:not(.button) { display:none; } .hero { padding:54px 0 72px; } }
 @media (max-width:520px) { .container { width:min(100% - 24px,1120px); }.header-inner { min-height:62px; }.nav { gap:10px; }.nav .button { min-height:42px; padding:7px 14px; font-size:12px; }.hero-grid { gap:34px; } h1 { font-size:52px; }.lede { font-size:16px; }.section { padding:62px 0; }.product-grid,.woocommerce ul.products { gap:12px; }.product-card { border-width:3px; border-radius:18px; box-shadow:4px 5px 0 var(--line); }.product-card-content { padding:12px; }.product-card h3 { font-size:17px; }.price { font-size:20px; }.stats { grid-template-columns:1fr; }.section-heading { display:block; } }
+
+/* Playful polish: keep the character, add a quieter luxury finish. */
+body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: .005em; }
+.logo, h1, h2, h3, .price, .stat strong { font-family: "Trebuchet MS", Inter, ui-sans-serif, sans-serif; }
+.notice { font-size: 11px; letter-spacing: .16em; }
+.site-header { box-shadow: 0 8px 24px rgba(36,21,47,.08); }
+.logo { font-size: 22px; letter-spacing: -.1em; }
+.nav { letter-spacing: .02em; }
+.hero { padding-top: 88px; background-image: radial-gradient(rgba(155,93,229,.16) 1.5px, transparent 1.5px); }
+.kicker { background: #fffdf2; letter-spacing: .14em; }
+.lede { color: #5e5065; line-height: 1.7; }
+.button, .button.alt, button.single_add_to_cart_button { letter-spacing: .01em; }
+.button.alt { background: #79dce2; }
+.hero-image { box-shadow: 10px 11px 0 rgba(36,21,47,.92); }
+.product-card { border-color: rgba(36,21,47,.94); background: #fffdf6; box-shadow: 6px 7px 0 rgba(36,21,47,.92); transition: transform .2s ease, box-shadow .2s ease; }
+.product-card:hover { transform: translateY(-5px) rotate(-.3deg); box-shadow: 8px 12px 0 rgba(36,21,47,.92); }
+.product-card h3 a { text-decoration: none; }
+.product-card p { color: #76677a; font-size: 14px; line-height: 1.55; }
+.product-card .button { box-shadow: 3px 4px 0 var(--line); }
+.stats .stat { background: rgba(255,253,246,.94); }
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
