@@ -1,7 +1,7 @@
 # Pussycat Mart
 
-Deployable WordPress + WooCommerce store.
+Deployable WordPress + WooCommerce site for Hostinger.
 
-The document root is [`public_html/`](public_html/). The custom customer-facing theme is located at [`public_html/wp-content/themes/pussycatmart/`](public_html/wp-content/themes/pussycatmart/).
+This repository is meant to be deployed directly into the hosting document root (`public_html/`). The custom theme is at `wp-content/themes/pussycatmart/`.
 
-Upload the contents of `public_html/` to your hosting `public_html/` directory, configure `wp-config.php`, finish the WordPress installer, activate the **Pussycat Mart** theme, and activate WooCommerce. See [`public_html/README.md`](public_html/README.md) for the full deployment steps.
+Upload/clone this repository into Hostinger `public_html/`, configure `wp-config.php`, finish the WordPress installer, activate the Pussycat Mart theme, and activate WooCommerce.
