@@ -1,5 +1,5 @@
 <?php
-/** PussyPress theme setup and WooCommerce hooks. */
+/** Pussycat Mart theme setup and WooCommerce hooks. */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 function pussypress_setup() {
@@ -28,3 +28,14 @@ function pussypress_loop_button() {
     if ( ! $product ) { return; }
     woocommerce_template_loop_add_to_cart();
 }
+
+/** Seed the starter products once when the theme is active, keeping them editable in WooCommerce. */
+function pussypress_seed_catalog_once() {
+    if ( ! class_exists( 'WooCommerce' ) || get_option( 'pussycatmart_catalog_seeded' ) ) { return; }
+    $catalog_plugin = WP_PLUGIN_DIR . '/pussycatmart-catalog/pussycatmart-catalog.php';
+    if ( file_exists( $catalog_plugin ) ) {
+        require_once $catalog_plugin;
+        if ( function_exists( 'pussycatmart_seed_catalog' ) ) { pussycatmart_seed_catalog(); }
+    }
+}
+add_action( 'init', 'pussypress_seed_catalog_once', 20 );
