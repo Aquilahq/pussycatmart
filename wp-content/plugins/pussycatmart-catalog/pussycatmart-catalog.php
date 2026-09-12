@@ -14,6 +14,14 @@ function pussycatmart_seed_catalog() {
         array( 'sku' => 'PCM-FEATHER-FRENZY', 'name' => 'Feather Frenzy Toy Set', 'price' => '19', 'description' => 'Five feather wands and one catnip mouse of pure chaos.', 'image' => 'product-toys.jpg' ),
         array( 'sku' => 'PCM-SLOW-SIP', 'name' => 'Slow Sip Ceramic Diner', 'price' => '34', 'description' => 'Elevated double bowls. Fine dining for a very small critic.', 'image' => 'product-bowl.jpg' ),
     );
+    if ( get_option( 'pussycatmart_catalog_seeded' ) ) {
+        $needs_repair = false;
+        foreach ( $products as $item ) {
+            $existing_id = wc_get_product_id_by_sku( $item['sku'] );
+            if ( ! $existing_id || ! wc_get_product( $existing_id )->get_image_id() ) { $needs_repair = true; break; }
+        }
+        if ( ! $needs_repair ) { return; }
+    }
     foreach ( $products as $item ) {
         $product_id = wc_get_product_id_by_sku( $item['sku'] );
         $product = $product_id ? wc_get_product( $product_id ) : new WC_Product_Simple();

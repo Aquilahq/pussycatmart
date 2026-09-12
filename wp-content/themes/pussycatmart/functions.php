@@ -31,7 +31,7 @@ function pussypress_loop_button() {
 
 /** Seed the starter products once when the theme is active, keeping them editable in WooCommerce. */
 function pussypress_seed_catalog_once() {
-    if ( ! class_exists( 'WooCommerce' ) || get_option( 'pussycatmart_catalog_seeded' ) ) { return; }
+    if ( ! class_exists( 'WooCommerce' ) ) { return; }
     $catalog_plugin = WP_PLUGIN_DIR . '/pussycatmart-catalog/pussycatmart-catalog.php';
     if ( file_exists( $catalog_plugin ) ) {
         require_once $catalog_plugin;
