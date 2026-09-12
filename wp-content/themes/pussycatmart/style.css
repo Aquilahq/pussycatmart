@@ -68,7 +68,12 @@ body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 .button.alt { background: #79dce2; }
 .hero-image { box-shadow: 10px 11px 0 rgba(36,21,47,.92); }
 .product-card { border-color: rgba(36,21,47,.94); background: #fffdf6; box-shadow: 6px 7px 0 rgba(36,21,47,.92); transition: transform .2s ease, box-shadow .2s ease; }
-.product-card:hover { transform: translateY(-5px) rotate(-.3deg); box-shadow: 8px 12px 0 rgba(36,21,47,.92); }
+.product-card:nth-child(4n + 1) { transform: rotate(-1.2deg); }
+.product-card:nth-child(4n + 2) { transform: rotate(1deg); }
+.product-card:nth-child(4n + 3) { transform: rotate(-.6deg); }
+.product-card:nth-child(4n + 4) { transform: rotate(1.4deg); }
+.product-card:hover { transform: translateY(-5px) rotate(0deg); box-shadow: 8px 12px 0 rgba(36,21,47,.92); }
+@media (max-width: 800px) { .product-card:nth-child(odd) { transform: rotate(-.8deg); } .product-card:nth-child(even) { transform: rotate(.8deg); } .product-card:hover { transform: translateY(-4px) rotate(0deg); } }
 .product-card h3 a { text-decoration: none; }
 .product-card p { color: #76677a; font-size: 14px; line-height: 1.55; }
 .product-card .button { box-shadow: 3px 4px 0 var(--line); }
