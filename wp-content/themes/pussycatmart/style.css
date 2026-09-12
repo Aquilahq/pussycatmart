@@ -86,9 +86,14 @@ body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSyst
 body { background: #fff; color: var(--navy); }
 .notice { display: none; }
 .site-header { border-bottom: 1px solid #eee7df; background: rgba(255,255,255,.96); box-shadow: 0 4px 18px rgba(24,34,54,.06); }
-.logo { color: #242025; }
-.logo::before { content: '🐱'; margin-right: 8px; font-size: 25px; letter-spacing: 0; }
-.logo em { color: var(--orange); }
+.logo { display: inline-flex; align-items: center; gap: 10px; color: #242025; letter-spacing: 0; }
+.logo::before { display: none; }
+.logo-mark { display: grid; width: 42px; height: 42px; place-items: center; border: 2px solid var(--navy); border-radius: 13px 13px 13px 4px; background: var(--orange); box-shadow: 3px 3px 0 var(--navy); font-size: 23px; line-height: 1; transform: rotate(-4deg); }
+.logo-copy { display: grid; gap: 0; text-align: left; line-height: 1; }
+.logo-copy strong { font-size: 21px; font-weight: 1000; letter-spacing: -.07em; }
+.logo-copy em { color: var(--orange); font-style: normal; }
+.logo-copy small { margin-top: 5px; color: #657080; font-family: Georgia, serif; font-size: 10px; font-style: italic; font-weight: 700; letter-spacing: .03em; }
+@media (max-width: 520px) { .logo-mark { width: 36px; height: 36px; font-size: 19px; }.logo-copy strong { font-size: 18px; }.logo-copy small { font-size: 9px; } }
 .nav { color: var(--navy); }
 .nav .button { background: var(--orange); border-color: var(--navy); color: #fff; box-shadow: none; min-height: 42px; padding: 9px 19px; }
 .hero { padding: 42px 0 0; background: linear-gradient(102deg, #fff8f0 0%, #fff 53%); background-image: none; }
