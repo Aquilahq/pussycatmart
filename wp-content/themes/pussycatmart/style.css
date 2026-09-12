@@ -94,6 +94,9 @@ body { background: #fff; color: var(--navy); }
 .logo-copy em { color: var(--orange); font-style: normal; }
 .logo-copy small { margin-top: 5px; color: #657080; font-family: Georgia, serif; font-size: 10px; font-style: italic; font-weight: 700; letter-spacing: .03em; }
 @media (max-width: 520px) { .logo-mark { width: 36px; height: 36px; font-size: 19px; }.logo-copy strong { font-size: 18px; }.logo-copy small { font-size: 9px; } }
+.logo { gap: 0; }
+.logo img { display: block; width: 220px; height: auto; max-height: 58px; object-fit: contain; object-position: left center; }
+@media (max-width: 520px) { .logo img { width: 178px; max-height: 50px; } }
 .nav { color: var(--navy); }
 .nav .button { background: var(--orange); border-color: var(--navy); color: #fff; box-shadow: none; min-height: 42px; padding: 9px 19px; }
 .hero { padding: 42px 0 0; background: linear-gradient(102deg, #fff8f0 0%, #fff 53%); background-image: none; }
