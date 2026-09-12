@@ -1,0 +1,1 @@
+<footer class="site-footer"><div class="container"><p>🐾 © <?php echo esc_html( gmdate( 'Y' ) ); ?> Pussycat Mart — the purrfect choice for your cat.</p></div></footer></div><?php wp_footer(); ?></body></html>

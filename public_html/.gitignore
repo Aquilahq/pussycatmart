@@ -1,0 +1,13 @@
+# Environment-specific WordPress configuration
+wp-config.php
+
+# Runtime/user-generated content
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/languages/
+
+# Hosting/runtime files
+.htaccess
+.error_log
+php_errorlog
