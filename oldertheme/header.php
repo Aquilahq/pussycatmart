@@ -1,0 +1,5 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><!doctype html>
+<html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo( 'charset' ); ?>"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Cat gear that gives back. Every Pussycat Mart order supports cat rescues."><?php wp_head(); ?></head>
+<body <?php body_class(); ?>><div class="site-shell"><?php wp_body_open(); ?>
+<div class="notice">🐾 10% of every order feeds a rescue cat 🐾 Free shipping over $75 🐾</div>
+<header class="site-header"><div class="container header-inner"><a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Pussycat Mart home">PUSSYCAT<em>MART</em></a><nav class="nav" aria-label="Primary navigation"><a href="<?php echo esc_url( home_url( '/#shop' ) ); ?>">Shop</a><a href="<?php echo esc_url( home_url( '/#giveback' ) ); ?>">Give Back</a><a class="button" href="<?php echo esc_url( function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : wp_login_url() ); ?>">Order now</a></nav></div></header>
